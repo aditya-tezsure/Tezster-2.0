@@ -5,6 +5,7 @@
   width: 2rem;
   background-repeat: no-repeat;
 }
+
 .blocks-icon {
   background: url('../../../resources/icons/24px_grid-interface.svg');
   display: inline-flex;
@@ -69,4 +70,15 @@
   width: 2rem;
   background-repeat: no-repeat;
   margin-top: 5px !important;
+}
+.sidebar-content-active {
+  .blocks-icon,
+  .wallet-icon,
+  .card-icon,
+  .events-icon,
+  .fill-icon,
+  .email-icon,
+  .settings-icon {
+    margin-top: 10px !important;
+  }
 }

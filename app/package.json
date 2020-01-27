@@ -7,7 +7,7 @@
   "author": {
     "name": "Electron React Boilerplate Maintainers",
     "email": "electronreactboilerplate@gmail.com",
-    "url": "https://github.com/electron-react-boilerplate"
+    "url": "https://github.com/Tezster-2.0"
   },
   "scripts": {
     "electron-rebuild": "node -r ../internals/scripts/BabelRegister.js ../internals/scripts/ElectronRebuild.js",

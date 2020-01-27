@@ -3,10 +3,13 @@ import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
 import type { HashHistory } from 'history';
 import counter from './counter';
+import { sidebarToggleState, currentTab } from './Workspace/sidebar';
 
 export default function createRootReducer(history: HashHistory) {
   return combineReducers<{}, *>({
     router: connectRouter(history),
-    counter
+    counter,
+    sidebarToggleState,
+    currentTab
   });
 }

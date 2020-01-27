@@ -1,0 +1,72 @@
+.contracts-table-container {
+  overflow-y: scroll;
+  max-height: 500px;
+  background-color: #ffff !important;
+  color: #727d95 !important;
+  font-weight: 700;
+  padding: 10px;
+}
+.contract-deployed {
+  background: #39b999;
+  color: #fff;
+  padding: 4px;
+  padding-right: 18px;
+  padding-left: 18px;
+  position: inherit;
+  margin-top: 1rem;
+  border-radius: 18px;
+  margin-left: 0.5rem;
+}
+.contract-status-container {
+  margin-top: 10px;
+}
+.events-table-container {
+  overflow-y: scroll;
+  max-height: 500px;
+  background-color: #ffff !important;
+  color: #727d95 !important;
+  font-weight: 700;
+  padding: 10px;
+}
+.events-table-container > table {
+  background-color: #f1f3f5 !important;
+}
+.events-table-container .cards-container {
+  background-color: #f1f3f5 !important;
+}
+.events-table-container .cards-container .cards {
+  background-color: #f1f3f5 !important;
+}
+.events-container {
+  background-color: #f1f3f5 !important;
+  padding: 10px;
+}
+.logs-container > .cards-container {
+  height: 500px;
+}
+.logs-container > .cards-container > .cards {
+  width: 100%;
+}
+.logs-container > .cards-container > .cards > .cards-contents {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  background-color: #f1f3f5;
+}
+.logs-container > .cards-container > .cards > .cards-header {
+  padding: 10px 0 10px 0;
+}
+.transaction-container {
+  padding: 10px;
+  background: #fff;
+  margin-top: 10px;
+}
+.transaction-status-button {
+  background-color: #727d95;
+  padding: 4px 18px 4px 18px;
+  border-radius: 18px;
+  color: #fff;
+}
+.transaction-container .cards {
+  justify-content: flex-end !important;
+}

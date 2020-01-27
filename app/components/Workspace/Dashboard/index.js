@@ -1,85 +1,38 @@
 import React from 'react';
+import Accounts from '../Accounts';
+import Blocks from '../Blocks';
+import Transactions from '../Transactions';
+import Contracts from '../Contracts';
+import Events from '../Events';
+import Logs from '../Logs';
+import Help from '../Help';
+import Settings from '../Settings';
 
-function Dashboard() {
+import Header from './Header';
+
+function Dashboard(props) {
+  let DashboardContent = <Accounts />;
+  if (props.currentTab === 'accounts') {
+    DashboardContent = <Accounts />;
+  } else if (props.currentTab === 'blocks') {
+    DashboardContent = <Blocks />;
+  } else if (props.currentTab === 'transactions') {
+    DashboardContent = <Transactions />;
+  } else if (props.currentTab === 'contracts') {
+    DashboardContent = <Contracts />;
+  } else if (props.currentTab === 'events') {
+    DashboardContent = <Events />;
+  } else if (props.currentTab === 'logs') {
+    DashboardContent = <Logs />;
+  } else if (props.currentTab === 'help') {
+    DashboardContent = <Help />;
+  } else if (props.currentTab === 'settings') {
+    DashboardContent = <Settings />;
+  }
   return (
     <main className="container-dashboard">
-      <div className="cards-container">
-        <div className="cards">
-          <div className="cards-header">
-            <h4>00</h4>
-          </div>
-          <div className="cards-contents">
-            <p>Current Block</p>
-          </div>
-        </div>
-        <div className="cards">
-          <div className="cards-header">
-            <h4>$6000000</h4>
-          </div>
-          <div className="cards-contents">
-            <p>Gas Price</p>
-          </div>
-        </div>
-        <div className="cards">
-          <div className="cards-header">
-            <h4>
-              <i
-                className="fas fa-long-arrow-alt-up"
-                style={{ color: '#30d530' }}
-              />{' '}
-              Petersburg
-            </h4>
-          </div>
-          <div className="cards-contents">
-            <p>Hard Fork</p>
-          </div>
-        </div>
-        <div className="cards">
-          <div className="cards-header">
-            <h4>17156</h4>
-          </div>
-          <div className="cards-contents">
-            <p>Network Id</p>
-          </div>
-        </div>
-        <div className="cards">
-          <div className="cards-header">
-            <h4>https://127.0.0.1:7545</h4>
-          </div>
-          <div className="cards-contents">
-            <p>Rpc Server</p>
-          </div>
-        </div>
-        <div className="cards">
-          <div className="cards-header">
-            <h4>automining</h4>
-          </div>
-          <div className="cards-contents">
-            <p>Mining status</p>
-          </div>
-        </div>
-        <div className="cards">
-          <div className="cards-header">
-            <h4>Quick Access</h4>
-          </div>
-          <div className="cards-contents">
-            <p>Workspace</p>
-          </div>
-        </div>
-        <div className="cards button-card">
-          <button type="button" className="save-button">
-            save
-          </button>
-          <button type="button" className="switch-button">
-            switch
-          </button>
-        </div>
-      </div>
-      <div className="table-container">
-        <table>
-          <thead />
-        </table>
-      </div>
+      <Header />
+      {DashboardContent}
     </main>
   );
 }
