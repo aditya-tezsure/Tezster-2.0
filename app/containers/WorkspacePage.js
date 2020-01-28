@@ -4,19 +4,13 @@ import { connect } from 'react-redux';
 import Workspace from '../components/Workspace';
 import {
   sidebarToggleAction,
+  handleAccordionAction,
   handleTabChangeAction
 } from '../actions/Workspace/sidebar';
 
 class WorkspacePage extends Component {
   render() {
-    return (
-      <Workspace
-        sidebarToggleAction={this.props.sidebarToggleAction}
-        sidebarToggleState={this.props.sidebarToggleState}
-        handleTabChangeAction={this.props.handleTabChangeAction}
-        currentTab={this.props.currentTab}
-      />
-    );
+    return <Workspace {...this.props} />;
   }
 }
 // WorkspacePage.propTypes = {
@@ -25,10 +19,12 @@ class WorkspacePage extends Component {
 // };
 const mapDispatchToProps = dispatch => ({
   sidebarToggleAction: payload => dispatch(sidebarToggleAction(payload)),
-  handleTabChangeAction: payload => dispatch(handleTabChangeAction(payload))
+  handleTabChangeAction: payload => dispatch(handleTabChangeAction(payload)),
+  handleAccordionAction: payload => dispatch(handleAccordionAction(payload))
 });
 const mapStateToProps = state => ({
   sidebarToggleState: state.sidebarToggleState,
+  blockAccordionIndex: state.blockAccordionIndex,
   currentTab: state.currentTab
 });
 

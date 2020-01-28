@@ -15,3 +15,12 @@ export function currentTab(initialState = 'accounts', action) {
       return initialState;
   }
 }
+
+export function blockAccordionIndex(initialState = 0, action) {
+  switch (action.type) {
+    case 'BLOCK_TOGGLE':
+      return action.payload;
+    default:
+      return initialState;
+  }
+}

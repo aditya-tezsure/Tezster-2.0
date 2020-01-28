@@ -11,23 +11,23 @@ import Settings from '../Settings';
 import Header from './Header';
 
 function Dashboard(props) {
-  let DashboardContent = <Accounts />;
+  let DashboardContent = <Accounts {...props} />;
   if (props.currentTab === 'accounts') {
-    DashboardContent = <Accounts />;
+    DashboardContent = <Accounts {...props} />;
   } else if (props.currentTab === 'blocks') {
-    DashboardContent = <Blocks />;
+    DashboardContent = <Blocks {...props} />;
   } else if (props.currentTab === 'transactions') {
-    DashboardContent = <Transactions />;
+    DashboardContent = <Transactions {...props} />;
   } else if (props.currentTab === 'contracts') {
-    DashboardContent = <Contracts />;
+    DashboardContent = <Contracts {...props} />;
   } else if (props.currentTab === 'events') {
-    DashboardContent = <Events />;
+    DashboardContent = <Events {...props} />;
   } else if (props.currentTab === 'logs') {
-    DashboardContent = <Logs />;
+    DashboardContent = <Logs {...props} />;
   } else if (props.currentTab === 'help') {
-    DashboardContent = <Help />;
+    DashboardContent = <Help {...props} />;
   } else if (props.currentTab === 'settings') {
-    DashboardContent = <Settings />;
+    DashboardContent = <Settings {...props} />;
   }
   return (
     <main className="container-dashboard">

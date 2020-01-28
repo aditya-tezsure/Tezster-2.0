@@ -10,3 +10,9 @@ export function handleTabChangeAction(tabName) {
     payload: tabName
   };
 }
+export function handleAccordionAction(BlockIndex) {
+  return {
+    type: 'BLOCK_TOGGLE',
+    payload: BlockIndex
+  };
+}
